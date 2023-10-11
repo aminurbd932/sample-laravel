@@ -1,0 +1,24 @@
+docker run --rm -v $(pwd):/app composer create-project --prefer-dist laravel/laravel my-laravel-app
+
+php artisan migrate
+php artisan migrate:fresh
+
+php artisan make:controller AuthController
+
+php artisan config:clear
+php artisan cache:clear
+php artisan route:clear
+
+DB
+=================
+php artisan make:migration create_product_categories_table
+
+php artisan make:model ProductCategory
+php artisan make:model ProductCategory --migration
+php artisan make:controller ProductCategoryController
+php artisan make:resource ProductCategoryResource
+php artisan make:request ProductCategoryRequest
+php artisan make:provider ProductCategoryProvider
+
+
+

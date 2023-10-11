@@ -1,0 +1,9 @@
+CREATE USER 'aminur'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'aminur'@'localhost';
+FLUSH PRIVILEGES;
+CREATE USER 'aminur'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'aminur'@'%';
+FLUSH PRIVILEGES;
+
+CREATE DATABASE IF NOT EXISTS microfin_v3_akk;
+CREATE DATABASE IF NOT EXISTS archive_mf_ava;
